@@ -8,9 +8,24 @@
 
     <script defer src="render.js"></script>
   </head>
-  <body>
-    <video src=""></video>
+  <body class="full-view">
+    <div class="parent blur_bg full-view">
+      <video class="full-view" src=""></video>
 
-    <button id="videoSelectBtn" class="button is-text">Choose video source</button>
+      <div class="action-layer full-view">
+        <div class="action-layer-top action-layer-child">
+          <button id="closeBtn" class="button is-light custom-rounded custom-rounded-width action-layer-center-x">X</button>
+        </div>
+        
+        <div class="action-layer-bottom">
+          <div id="sourceLabel" class="source-label"></div>
+          <div class="action-layer-child">
+            <button id="videoSelectBtn" class="button is-light custom-rounded action-layer-center-x">Source</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
   </body>
 </html>

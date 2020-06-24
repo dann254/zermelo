@@ -4,7 +4,9 @@ const stopBtn = document.getElementById('stopBtn')
 const videoSelectBtn = document.getElementById('videoSelectBtn')
 const closeBtn = document.getElementById('closeBtn')
 const sourceLabel = document.getElementById('sourceLabel')
+const actionLayer = document.getElementById('actionLayer')
 
+actionLayer.style.display = "flex";
 videoSelectBtn.onclick = getVideoSources;
 closeBtn.onclick = closeWindow;
 
@@ -31,6 +33,7 @@ async function getVideoSources() {
 
 async function selectSource(source) {
     sourceLabel.innerText = source.name
+    actionLayer.style.removeProperty("display")
     const constraints = {
         audio: false,
         video: {

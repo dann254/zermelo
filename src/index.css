@@ -67,6 +67,7 @@ video:hover + .action-layer {
   display: flex;
 }
 
+
 .action-layer-child {
   display: flex;
   justify-content: center;
